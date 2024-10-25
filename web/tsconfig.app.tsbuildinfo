@@ -1,0 +1,1 @@
+{"root":["./src/App.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/ButtonInput.tsx","./src/components/BuyRequestText.tsx","./src/components/Content.tsx","./src/components/ForSaleText.tsx","./src/components/List.tsx","./src/contexts/WebSocketContext.tsx","./src/libs/socket.ts"],"version":"5.6.2"}

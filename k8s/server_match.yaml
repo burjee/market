@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: market-match
+  labels:
+    app: market-match
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: market-match
+  template:
+    metadata:
+      labels:
+        app: market-match
+    spec:
+      containers:
+      - name: market-match
+        image: "market/match:latest"
+        imagePullPolicy: Never
+        resources:
+          requests:
+            cpu: 500m
+            memory: 128Mi
+          limits:
+            cpu: 500m
+            memory: 128Mi
+        workingDir: /app/bin
+        volumeMounts:
+        - name: config-volume
+          mountPath: /app/bin/config
+          readOnly: true
+      volumes:
+      - name: config-volume
+        configMap:
+          name: server-config
+          items:
+          - key: "config.toml"
+            path: "config.toml"

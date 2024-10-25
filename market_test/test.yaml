@@ -1,0 +1,15 @@
+config:
+  target: http://localhost
+  phases:
+    - duration: 25
+      arrivalRate: 1
+      name: buy/sell
+
+scenarios:
+  - name: "buy_and_sell"
+    flow:
+      - loop:
+          - post:
+              url: "/api/test"
+          - think: 1
+        count: 60

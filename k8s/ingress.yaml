@@ -1,0 +1,37 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: market-ingress
+spec:
+  ingressClassName: nginx
+  rules:
+  - http:
+      paths:
+      - path: "/"
+        pathType: Exact
+        backend:
+          service:
+            name: market-order
+            port:
+              number: 8000
+      - path: "/assets"
+        pathType: Prefix
+        backend:
+          service:
+            name: market-order
+            port:
+              number: 8000
+      - path: "/api"
+        pathType: Prefix
+        backend:
+          service:
+            name: market-order
+            port:
+              number: 8000
+      - path: "/ws"
+        pathType: Exact
+        backend:
+          service:
+            name: market-notify
+            port:
+              number: 8001
