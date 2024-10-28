@@ -4,6 +4,8 @@ A project for practicing microservices and Kubernetes, featuring a simple trade 
 
 Users create orders, which are sent to the matching system via Kafka for processing. The notification system broadcasts the order list using WebSocket. Orders and other data are stored only in Redis.
 
+<img src="./web.png" alt="web" width="400"/>
+
 ## Folder
 
 ``` bash
