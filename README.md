@@ -47,6 +47,8 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 
 #### Run
 
+Open the webpage on local port 80.
+
 ```bash
 cd k8s
 kubectl apply -f .
