@@ -1,6 +1,6 @@
 # SIMPLE MARKET
 
-A project for practicing microservices and Kubernetes, featuring a simple trade matching system. With 0.5 CPU and 128MB of memory, it can match 1000+ orders per second.
+A project for practicing microservices and Kubernetes, featuring a simple trade matching system. With 1 CPU and 128MB of memory, it can match 1000+ orders per second.
 
 Users create orders, which are sent to the matching system via Kafka for processing. The notification system broadcasts the order list using WebSocket. Orders and other data are stored only in Redis.
 
