@@ -69,7 +69,7 @@ npx artillery run test.yaml
 You can view the logs of the matching system, which display the average matches per second for the past one minute, five minutes, fifteen minutes, and overall.
 
 ```bash
-kubectl logs --tail=1 -f {your-market-match-pod-name}
+kubectl logs -f --tail=0 {your-market-match-pod-name}
 ```
 
 #### Delete
